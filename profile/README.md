@@ -6,4 +6,6 @@ Em cada repositório, o README apresenta o objetivo do trabalho, como executar o
 
 ## Para quem está no grupo
 
-Abra uma issue para combinar tarefas e envie suas mudanças em um pull request para revisão antes de integrar na `main`.
+1. Abra uma issue para combinar a tarefa e definir quem fica responsável.
+2. Faça a alteração em uma branch e abra um pull request para `main`.
+3. Peça a revisão de outra pessoa do grupo antes de mesclar.

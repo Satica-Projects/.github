@@ -1,6 +1,6 @@
 # Satica Projects
 
-Reunimos aqui os projetos que desenvolvemos na faculdade, em dupla e com colegas de diferentes turmas e disciplinas.
+Reunimos aqui os projetos que desenvolvemos na faculdade.
 
 Em cada repositório, o README apresenta o objetivo do trabalho, como executar ou consultar o projeto e quem contribuiu.
 

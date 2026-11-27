@@ -1,0 +1,28 @@
+name: Atribuir novas issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  atribuir:
+    name: Atribuir issue sem responsável
+    runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+    steps:
+      - name: Conferir e atribuir responsáveis
+        shell: bash
+        run: |
+          issue_endpoint="repos/$GITHUB_REPOSITORY/issues/$ISSUE_NUMBER"
+          assignee_count=$(gh api "$issue_endpoint" --jq '.assignees | length')
+          if [[ "$assignee_count" == 0 ]]; then
+            gh api --method POST "$issue_endpoint/assignees" \
+              -f 'assignees[]=GabrielMeurer001' \
+              -f 'assignees[]=majutalamini' \
+              --jq '.assignees[].login'
+          fi
